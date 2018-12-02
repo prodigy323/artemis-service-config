@@ -1,0 +1,31 @@
+info:
+  component: Spring Cloud Config Server
+
+server:
+  port: 8900
+
+spring:
+  application:
+    name: artemis-service-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${HOME}/dev/github/springcloud/artemis-repo-config
+#  cloud:
+#    config:
+#      server:
+#        native:
+#          searchLocations: file:///${HOME}/dev/github/springcloud/artemis-repo-config/
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+encrypt:
+  key-store:
+    location: server.jks
+    password: changeme
+    alias: config
+    secret: changeme
