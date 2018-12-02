@@ -134,9 +134,11 @@ spring:
 ```
 > In Prod, the keystore credentials should be passed in via startup parameters, with only the location set inside the cloud config properties. The keystore should also be stored on an external system (ie...file system, vault, etc.)
 
--Djavax.net.ssl.keyStorePassword=
+-Dencrypt.key-store.password=changeme 
 
--Djavax.net.ssl.trustStorePassword=
+-Dencrypt.key-store.secret=changeme
+
+-Dencrypt.key-store.alias=changeme
 
 ### Main Application class
 <pre>

@@ -26,6 +26,6 @@ eureka:
 encrypt:
   key-store:
     location: server.jks
-    password: changeme
     alias: config
+    password: changeme
     secret: changeme
